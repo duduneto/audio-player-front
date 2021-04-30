@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast</title>
+</head>
+
+<body>
+    <h1>PodCast Javascript</h1>
+    <h2>Stream de audio</h2>
+    <audio controls>
+        <source src="http://localhost:3000/storage_audio" type="audio/mp3">
+    </audio>
+
+    <form id="uploadForm" enctype="multipart/form-data" action="http://localhost:3000/audio" method="post">
+        <input type="file" name="audio" />
+        <input type="submit" value="Upload File" name="submit">
+
+    </form>
+</body>
+
+</html>
+<script>
+    const _audio = document.getElementsByTagName('audio')[0];
+    _audio.pause = () => console.log('Pausado')
+</script>
